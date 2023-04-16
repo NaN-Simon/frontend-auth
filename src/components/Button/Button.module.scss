@@ -1,0 +1,80 @@
+@import '../../styles/base.scss';
+@import '../../styles/mixins.scss';
+
+.button{
+  display: flex;
+  justify-content: space-between;
+  min-width: 100px;
+  min-height: inherit;
+
+  &__colored{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: inherit;
+    height: inherit;
+    padding: 0 5px;
+    color: $lightThemeButtonColor;
+    background: $lightThemeButtonBg;
+    border: none;
+    border-radius: 22px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 700;
+    @include font-h2;
+
+    &:hover {
+      background: $lightThemeButtonBgHover;
+    }
+
+    &__transparent {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: inherit;
+      height: inherit;
+      padding: 0 5px;
+      color: $lightThemeButtonBg;
+      background: transparent;
+      border: 2px solid $lightThemeButtonBg;
+      border-radius: 22px;
+      outline: none;
+      cursor: pointer;
+      transition: 0.5s;
+
+      @include font-h2;
+
+      &:hover {
+        color: $lightThemeButtonColor;
+        background: $lightThemeButtonBg;
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $lightThemeButtonBg;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.5s;
+
+    @include font-h2;
+
+    &:hover {
+      color: $lightThemeButtonBgHover;
+    }
+  }
+
+  &--disable{
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+}
